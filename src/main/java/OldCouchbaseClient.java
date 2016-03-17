@@ -13,7 +13,7 @@ public class OldCouchbaseClient {
 
     public static void main(String... args) throws Exception {
         CouchbaseClient client = new CouchbaseClient(
-            Arrays.asList(URI.create("http://127.0.0.1:8091/pools")
+            Arrays.asList(URI.create("http://"+args[1]+":8091/pools")
         ), "default", "");
 
         int rounds = 100000;

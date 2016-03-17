@@ -14,7 +14,7 @@ public class JavaClient {
             .builder()
             .callbacksOnIoPool(true)
             .build();
-        Cluster cluster = CouchbaseCluster.create(env);
+        Cluster cluster = CouchbaseCluster.create(env, args[1]);
         Bucket bucket = cluster.openBucket();
 
         int rounds = 100000;
